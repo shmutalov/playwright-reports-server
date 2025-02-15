@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: siteConfig.description,
     icons: {
-      icon: config?.faviconPath ? `/api/static${config.faviconPath}` : '/favicon.ico',
+      icon: process.env.API_BASE_PATH + (config?.faviconPath ? `/api/static${config.faviconPath}` : '/favicon.ico'),
     },
   };
 }

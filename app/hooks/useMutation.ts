@@ -28,7 +28,8 @@ const useMutation = <TData = unknown, TVariables = unknown>(
         headers.Authorization = apiToken;
       }
 
-      const response = await fetch(path ?? url, {
+      const fullPath = process.env.API_BASE_PATH + (path ?? url);
+      const response = await fetch(fullPath, {
         headers,
         body: body ? JSON.stringify(body) : undefined,
         method: options?.method ?? 'POST',

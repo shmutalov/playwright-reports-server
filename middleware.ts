@@ -15,7 +15,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const unprotectedRoutes = ['/api/ping', '/api/auth/', '/api/serve/', '/api/static/'];
+  const unprotectedRoutes = ['/api/ping', '/api/auth/', '/api/serve/', '/api/static/'].map(route => process.env.API_BASE_PATH + route);
 
   const isUnprotected = unprotectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route));
 

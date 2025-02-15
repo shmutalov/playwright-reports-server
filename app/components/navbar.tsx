@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = async ({ config }) => {
               alt="Logo"
               className="min-w-10"
               height="42"
-              src={`/api/static${config?.logoPath}`}
+              src={process.env.API_BASE_PATH + `/api/static${config?.logoPath}`}
               width="42"
             />
             <p className="font-bold text-inherit text-3xl">{title}</p>

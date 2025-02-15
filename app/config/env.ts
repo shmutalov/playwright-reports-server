@@ -17,4 +17,5 @@ export const env = cleanEnv(process.env, {
   RESULT_EXPIRE_CRON_SCHEDULE: str({ desc: 'Cron schedule for results cleanup', default: '33 3 * * *' }),
   REPORT_EXPIRE_DAYS: num({ desc: 'How much days to keep reports', default: undefined }),
   REPORT_EXPIRE_CRON_SCHEDULE: str({ desc: 'Cron schedule for reports cleanup', default: '44 4 * * *' }),
+  API_BASE_PATH: str({ desc: 'API base path', default: '' }),
 });

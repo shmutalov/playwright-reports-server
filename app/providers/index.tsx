@@ -24,7 +24,7 @@ export const Providers: React.FC<ThemeProviderProps> = ({ children, ...themeProp
     <NextUIProvider>
       <NextThemesProvider {...themeProps}>
         <QueryClientProvider client={queryClient}>
-          <SessionProvider>{children}</SessionProvider>
+          <SessionProvider basePath={process.env.API_BASE_PATH + "/api/auth"}>{children}</SessionProvider>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </NextThemesProvider>

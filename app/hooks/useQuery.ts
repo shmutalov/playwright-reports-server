@@ -42,7 +42,9 @@ const useQuery = <ReturnType>(
         headers.Authorization = session.data.user.apiToken;
       }
 
-      const response = await fetch(path, {
+      const fullPath = process.env.API_BASE_PATH + path;
+
+      const response = await fetch(fullPath, {
         headers,
         body: options?.body ? JSON.stringify(options.body) : undefined,
         method: options?.method ?? 'GET',
