@@ -23,7 +23,10 @@ const useQuery = <ReturnType>(
   useEffect(() => {
     if (session.status === 'unauthenticated') {
       toast.warning('Unauthorized');
-      router.push(withQueryParams('/login', options?.callback ? { callbackUrl: encodeURI(options.callback) } : {}));
+      router.push(withQueryParams(process.env.API_BASE_PATH + '/login', 
+        options?.callback 
+          ? { callbackUrl: encodeURI(options.callback) } 
+          : {callbackUrl: encodeURI(process.env.API_BASE_PATH!)}));
 
       return;
     }

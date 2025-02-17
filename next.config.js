@@ -9,7 +9,12 @@ const nextConfig = {
   //basePath: API_BASE_PATH,
   env: {
     API_BASE_PATH,
-  }
+  },
+  experimental: {
+    serverActions: {
+      allowedOrigins: ['*.datamicron.com'],
+    },
+  },
 };
 
 module.exports = nextConfig;

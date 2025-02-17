@@ -33,7 +33,7 @@ export async function GET(
   const targetPath = decodeURI(uriPath);
 
   if (!session?.user?.jwtToken) {
-    redirect(`/login?callbackUrl=${encodeURI(req.nextUrl.pathname)}`);
+    redirect(process.env.API_BASE_PATH + `/login?callbackUrl=${encodeURI(req.nextUrl.pathname)}`);
   }
 
   const contentType = mime.getType(path.basename(targetPath));
