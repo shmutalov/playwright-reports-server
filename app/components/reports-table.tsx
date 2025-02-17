@@ -135,7 +135,7 @@ export default function ReportsTable({ onChange }: Readonly<ReportsTableProps>) 
           {(item) => (
             <TableRow key={item.reportID}>
               <TableCell className="w-1/2">
-                <Link href={`/report/${item.reportID}`} prefetch={false}>
+                <Link href={process.env.API_BASE_PATH + `/report/${item.reportID}`} prefetch={false}>
                   <div className="flex flex-row">
                     {item.title || item.reportID} <LinkIcon />
                   </div>
@@ -149,7 +149,7 @@ export default function ReportsTable({ onChange }: Readonly<ReportsTableProps>) 
               <TableCell className="w-1/4">
                 <div className="flex gap-4 justify-end">
                   <Tooltip color="success" content="Open Report" placement="top">
-                    <Link href={item.reportUrl} prefetch={false} target="_blank">
+                    <Link href={process.env.API_BASE_PATH + item.reportUrl} prefetch={false} target="_blank">
                       <Button color="success" size="md">
                         <EyeIcon />
                       </Button>

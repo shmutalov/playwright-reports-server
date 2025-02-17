@@ -56,7 +56,7 @@ function ReportDetail({ params }: Readonly<ReportDetailProps>) {
       <div className="flex md:flex-row flex-col gap-2">
         <div className="flex flex-col items-center md:w-1/4 max-w-full">
           <ReportStatistics stats={report?.stats} />
-          <Link href={report?.reportUrl ?? ''} target="_blank">
+          <Link href={process.env.API_BASE_PATH + (report?.reportUrl ?? '')} target="_blank">
             <Button color="primary">Open report</Button>
           </Link>
         </div>
