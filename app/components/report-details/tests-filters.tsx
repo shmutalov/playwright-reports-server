@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
-import { Accordion, AccordionItem, Checkbox, CheckboxGroup, Input } from '@nextui-org/react';
+import { FC, useCallback, useEffect, useState } from 'react';
+import { Accordion, AccordionItem, Checkbox, CheckboxGroup, Input } from "@heroui/react";
 
 import { ReportTestOutcome } from '@/app/lib/parser/types';
 import { type ReportHistory } from '@/app/lib/storage/types';
@@ -20,7 +20,7 @@ const testOutcomes = [
   ReportTestOutcome.Flaky,
 ];
 
-const ReportFilters: React.FC<ReportFiltersProps> = ({ report, onChangeFilters }) => {
+const ReportFilters: FC<ReportFiltersProps> = ({ report, onChangeFilters }) => {
   const [byName, setByName] = useState('');
   const [byOutcomes, setByOutcomes] = useState<ReportTestOutcome[] | undefined>(testOutcomes);
 

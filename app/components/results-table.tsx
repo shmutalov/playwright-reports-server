@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import {
   Table,
   TableHeader,
@@ -12,7 +12,7 @@ import {
   type Selection,
   Spinner,
   Pagination,
-} from '@nextui-org/react';
+} from "@heroui/react";
 import { keepPreviousData } from '@tanstack/react-query';
 import { toast } from 'sonner';
 
@@ -90,7 +90,7 @@ export default function ResultsTable({ onSelect, onDeleted, selected }: Readonly
     [page, rowsPerPage],
   );
 
-  const pages = React.useMemo(() => {
+  const pages = useMemo(() => {
     return total ? Math.ceil(total / rowsPerPage) : 0;
   }, [project, total, rowsPerPage]);
 

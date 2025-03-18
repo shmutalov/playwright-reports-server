@@ -1,8 +1,8 @@
-import * as React from 'react';
+import { FC } from 'react';
 
 import { IconSvgProps } from '@/app/types';
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({ size = 48, width, height, ...props }) => {
+export const DiscordIcon: FC<IconSvgProps> = ({ size = 48, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
       <path
@@ -13,7 +13,7 @@ export const DiscordIcon: React.FC<IconSvgProps> = ({ size = 48, width, height, 
   );
 };
 
-export const GithubIcon: React.FC<IconSvgProps> = ({ size = 48, width, height, ...props }) => {
+export const GithubIcon: FC<IconSvgProps> = ({ size = 48, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
       <path
@@ -26,7 +26,26 @@ export const GithubIcon: React.FC<IconSvgProps> = ({ size = 48, width, height, .
   );
 };
 
-export const TelegramIcon: React.FC<IconSvgProps> = ({ size = 40, width, height, ...props }) => {
+export const BitbucketIcon: FC<IconSvgProps> = ({ size = 48, width, height, ...props }) => {
+  return (
+    <svg
+      fill="currentColor"
+      height={size || height}
+      viewBox="0 0 56 56"
+      width={size || width}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="m27.6 21.9q0 0 0 0c-1.3 0-2.5 0.5-3.4 1.4-0.9 0.9-1.4 2.1-1.4 3.3 0 2.6 2.2 4.7 4.8 4.7q0 0 0 0c1.3 0 2.5-0.5 3.4-1.4 0.8-0.9 1.3-2.1 1.3-3.3 0-2.6-2.1-4.6-4.7-4.7zm1.9 6.6c-0.5 0.5-1.2 0.8-1.9 0.8q0 0 0 0c-1.5 0-2.8-1.2-2.8-2.7 0-0.7 0.3-1.3 0.8-1.8 0.5-0.6 1.2-0.9 2-0.9q0 0 0 0c1.5 0 2.7 1.2 2.7 2.7 0 0.7-0.3 1.4-0.8 1.9z" />
+      <path d="m44.8 37.4q-0.7-0.1-1.5 0.4l-0.1 0.1q-0.5 0.3-0.9 0.6c-1.6 0.9-3.5 1.7-5.6 2.4-2.3 0.6-4.8 1-7.3 1.2q-2 0.1-4 0-2-0.2-3.8-0.5-3.3-0.6-6.2-1.8c-1.5-0.7-2.6-1.3-3.6-2q-0.2-0.2-0.6-0.3c-0.5-0.2-1-0.1-1.5 0.1-0.4 0.3-0.7 0.7-0.8 1.2q-0.1 0.5 0 0.9 0.3 2 0.7 4.1 0.4 1.6 0.7 3.1l0.2 1.2q0.2 0.9 0.7 1.7 0.5 0.7 1.3 1.4 1.2 0.9 2.9 1.7c1.6 0.7 3.6 1.3 5.8 1.7 1.5 0.2 3 0.4 4.5 0.5h3.5 0.2q1.8-0.1 3.7-0.4c1.7-0.2 3.1-0.6 4.6-1 1.4-0.5 2.6-1 3.7-1.6q1.2-0.7 1.9-1.5 1.1-1.2 1.4-2.5l0.8-4.2q0.4-2.1 0.8-4.2 0.1-0.3 0-0.7c-0.1-0.8-0.7-1.4-1.5-1.6zm-1.3 6.2l-0.8 4.1c-0.1 0.5-0.4 1-0.8 1.5q-0.6 0.6-1.5 1.2c-1 0.5-2 1-3.3 1.4-1.4 0.4-2.7 0.7-4.3 0.9q-1.8 0.3-3.5 0.4-0.1 0-0.2 0h-3q-0.1 0-0.2 0-2.2-0.1-4.4-0.5c-2-0.3-3.8-0.9-5.3-1.5q-1.5-0.7-2.4-1.5-0.6-0.4-0.9-0.9-0.3-0.5-0.4-1l-0.3-1.2q-0.3-1.5-0.6-3.1-0.4-1.9-0.7-3.8c1 0.7 2.2 1.4 3.7 2q3.1 1.3 6.6 2 2 0.3 4.1 0.5 2.1 0.1 4.2 0c2.7-0.2 5.3-0.6 7.7-1.3 2.3-0.7 4.3-1.5 6.2-2.6q0.4-0.3 0.9-0.6-0.4 2-0.8 4z" />
+      <path d="m42 5.8c-0.6-0.3-1.2-0.5-1.7-0.7-1.1-0.3-2.3-0.5-3.7-0.7-1.5-0.3-3.1-0.4-4.8-0.5q-1.1-0.1-2.4-0.1c-2.3-0.1-4.6-0.1-7 0.1-1.6 0.1-3 0.3-4.4 0.5-1.3 0.2-2.4 0.5-3.4 0.8-0.6 0.2-1.1 0.4-1.6 0.6-0.3 0.2-0.6 0.4-0.9 0.7-0.8 0.8-0.8 1.9 0 2.7q0.3 0.3 0.7 0.5 0.6 0.4 1.2 0.6c1.2 0.5 2.5 0.7 3.7 0.9 1.9 0.4 3.9 0.6 6.2 0.7q1.3 0.1 2.6 0.1h1.2 1.1q1.1 0 2.2-0.1 2.2-0.1 4.6-0.4c1.5-0.2 2.7-0.4 3.9-0.7 0.6-0.1 1.5-0.4 2.4-0.8 0.2-0.1 0.6-0.3 1-0.6 0.6-0.6 0.8-1.2 0.8-1.5 0-0.4-0.2-1-0.8-1.5-0.3-0.3-0.7-0.5-0.9-0.6zm-1 2.4c-0.7 0.4-1.4 0.6-2 0.7-1.1 0.3-2.2 0.5-3.6 0.7q-2.3 0.2-4.5 0.3-1.1 0.1-2.2 0.1h-1-1.1q-1.3 0-2.6-0.1c-2.2-0.1-4.2-0.3-6-0.6-1.1-0.2-2.2-0.5-3.3-0.9q-0.4-0.2-0.9-0.4-0.1-0.1-0.2-0.2 0.1-0.1 0.4-0.2 0.5-0.3 1.2-0.5c0.9-0.3 1.9-0.5 3.2-0.7 1.3-0.2 2.6-0.4 4.1-0.5q3.5-0.2 6.9-0.1 1.2 0 2.3 0.1c1.7 0.1 3.2 0.2 4.6 0.4 1.3 0.2 2.4 0.5 3.4 0.8 0.4 0.1 0.9 0.2 1.3 0.5 0.2 0 0.4 0.2 0.6 0.3q-0.2 0.2-0.6 0.3z" />
+      <path d="m27.6 18.3q0 0 0 0c-2.3 0-4.5 0.9-6.1 2.5-1.5 1.6-2.4 3.6-2.4 5.8 0 4.6 3.8 8.3 8.5 8.3q0 0 0 0c2.3 0 4.4-0.8 6-2.4 1.6-1.6 2.5-3.7 2.5-5.9 0-4.6-3.8-8.3-8.5-8.3zm4.6 12.8c-1.2 1.2-2.9 1.8-4.6 1.8q0 0 0 0c-3.6 0-6.5-2.8-6.5-6.3 0-1.6 0.6-3.2 1.8-4.4 1.3-1.2 2.9-1.9 4.7-1.9q0 0 0 0c3.6 0 6.5 2.8 6.5 6.3 0 1.7-0.7 3.3-1.9 4.5z" />
+      <path d="m52 7.8q0-0.1-0.1-0.3-0.3-1-1.2-1.9c-0.6-0.7-1.4-1.2-2.4-1.8-1.1-0.5-2.3-1-3.7-1.5q-2.7-0.8-5.5-1.3-1.7-0.3-3.3-0.5-1.4-0.2-2.9-0.3-1.3-0.1-2.6-0.1l-1.1-0.1h-0.2-2.8l-1.9 0.1q-1.2 0.1-2.4 0.1c-1.2 0.1-2.5 0.3-4 0.5-3.2 0.4-5.9 1.1-8.3 1.9-1.4 0.6-2.5 1.1-3.6 1.7q-1 0.7-1.7 1.5-1 1-1.2 2.1l-0.1 0.3v0.6l0.4 2.4q0.3 2 0.6 3.9 0.4 2.5 0.8 4.9l2.2 12.1q0.1 0.8 0.6 1.5c0.3 0.5 0.8 1 1.4 1.6 0.9 0.7 1.9 1.3 3.2 1.9 1.6 0.7 3.3 1.3 5.2 1.8 1.6 0.4 3.2 0.7 4.9 0.9q2.5 0.2 5.3 0.2 0.8 0 1.6 0c3-0.1 5.7-0.4 8.3-1.1 2.3-0.5 4.3-1.2 6.1-2.1q1.5-0.8 2.6-1.7 0.7-0.6 1.1-1.1 0.7-0.9 0.9-2.1 0.3-1.5 0.5-3l1.7-9.5q0.3-1.8 0.7-3.7 0.3-1.8 0.5-3.6 0.2-0.9 0.3-1.8l0.1-0.7 0.1-1.4zm-2.1 2.2q-0.1 0.9-0.3 1.8-0.3 1.7-0.6 3.5-0.3 1.9-0.6 3.8l-1.7 9.5q-0.2 1.5-0.5 3-0.1 0.6-0.5 1.1-0.3 0.4-0.8 0.8-0.9 0.8-2.3 1.5c-1.6 0.8-3.4 1.4-5.6 2-2.5 0.6-5.1 0.9-7.9 1q-3.5 0.1-6.6-0.3c-1.7-0.2-3.2-0.4-4.6-0.8-1.8-0.4-3.4-1-4.9-1.6-1.1-0.6-2-1.1-2.7-1.7-0.5-0.4-0.9-0.8-1.1-1.2q-0.2-0.3-0.3-0.6l-2.1-12.2q-0.4-2.4-0.8-4.8-0.4-2-0.7-3.9l-0.3-2q0-0.1 0-0.3 0-0.1 0-0.2c0.1-0.5 0.3-0.8 0.7-1.3 0.4-0.4 0.8-0.7 1.4-1.1 0.9-0.6 1.9-1 3.2-1.5 2.3-0.8 4.8-1.4 7.9-1.9 1.4-0.2 2.6-0.3 3.8-0.4q1.1-0.1 2.3-0.1l1.1-0.1h3.4q0.1 0 0.2 0h1.2q1.3 0.1 2.5 0.2 1.5 0.1 2.8 0.2 1.5 0.2 3.2 0.5 2.7 0.5 5.2 1.3c1.3 0.4 2.4 0.8 3.4 1.4 0.8 0.4 1.5 0.9 2 1.4 0.3 0.4 0.6 0.7 0.7 1.1q0 0.1 0.1 0.2v0.7z" />
+    </svg>
+  );
+};
+
+export const TelegramIcon: FC<IconSvgProps> = ({ size = 40, width, height, ...props }) => {
   return (
     <svg fill="none" height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
       <path
@@ -73,7 +92,7 @@ export const SunFilledIcon = ({ size = 48, width, height, ...props }: IconSvgPro
   </svg>
 );
 
-export const LinkIcon: React.FC<IconSvgProps> = ({ width, height, ...props }) => {
+export const LinkIcon: FC<IconSvgProps> = ({ width, height, ...props }) => {
   return (
     <svg fill="none" height={height ?? 18} viewBox="0 0 24 24" width={width ?? 18} {...props}>
       <path
@@ -92,7 +111,7 @@ export const LinkIcon: React.FC<IconSvgProps> = ({ width, height, ...props }) =>
   );
 };
 
-export const ReportIcon: React.FC<IconSvgProps> = () => {
+export const ReportIcon: FC<IconSvgProps> = () => {
   return (
     <svg height={48} id="Layer_1" version="1.1" viewBox="0 0 96.17 122.88" width={48} x="0px" y="0px">
       <g>
@@ -105,7 +124,7 @@ export const ReportIcon: React.FC<IconSvgProps> = () => {
   );
 };
 
-export const ResultIcon: React.FC<IconSvgProps> = () => {
+export const ResultIcon: FC<IconSvgProps> = () => {
   return (
     <svg height={48} id="Layer_1" version="1.1" viewBox="0 0 97.88 122.88" width={48} x="0px" y="0px">
       <g>
@@ -118,7 +137,7 @@ export const ResultIcon: React.FC<IconSvgProps> = () => {
   );
 };
 
-export const TrendIcon: React.FC<IconSvgProps> = () => {
+export const TrendIcon: FC<IconSvgProps> = () => {
   return (
     <svg fill="currentColor" height={42} id="Capa_1" viewBox="0 0 30.462 30.461" width={42}>
       <g>
@@ -132,7 +151,7 @@ export const TrendIcon: React.FC<IconSvgProps> = () => {
   );
 };
 
-export const DeleteIcon: React.FC<IconSvgProps> = (props) => (
+export const DeleteIcon: FC<IconSvgProps> = (props) => (
   <svg aria-hidden="true" fill="none" focusable="false" height="1em" viewBox="0 0 20 20" width="1em" {...props}>
     <path
       d="M17.5 4.98332C14.725 4.70832 11.9333 4.56665 9.15 4.56665C7.5 4.56665 5.85 4.64998 4.2 4.81665L2.5 4.98332"
@@ -172,7 +191,7 @@ export const DeleteIcon: React.FC<IconSvgProps> = (props) => (
   </svg>
 );
 
-export const EyeIcon: React.FC<IconSvgProps> = (props) => (
+export const EyeIcon: FC<IconSvgProps> = (props) => (
   <svg aria-hidden="true" fill="none" focusable="false" height="1em" viewBox="0 0 20 20" width="1em" {...props}>
     <path
       d="M12.9833 10C12.9833 11.65 11.65 12.9833 10 12.9833C8.35 12.9833 7.01666 11.65 7.01666 10C7.01666 8.35 8.35 7.01666 10 7.01666C11.65 7.01666 12.9833 8.35 12.9833 10Z"
@@ -191,7 +210,7 @@ export const EyeIcon: React.FC<IconSvgProps> = (props) => (
   </svg>
 );
 
-export const SearchIcon: React.FC<IconSvgProps> = (props) => (
+export const SearchIcon: FC<IconSvgProps> = (props) => (
   <svg
     aria-hidden="true"
     fill="none"
