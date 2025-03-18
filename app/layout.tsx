@@ -40,7 +40,9 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
 
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <base href={process.env.API_BASE_PATH} />
+      </head>
       <body className={clsx('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <Providers attribute="class" defaultTheme="dark">
           <div className="relative flex flex-col h-screen">
